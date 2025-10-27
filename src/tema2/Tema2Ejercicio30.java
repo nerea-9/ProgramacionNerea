@@ -5,35 +5,44 @@ import java.util.Scanner;
 public class Tema2Ejercicio30 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        String operacion;
+        double num1, num2, resultado;
 
-        System.out.println("Calculadora simple (escribe 'q' para salir)");
+        System.out.println("Calculadora simple (escribe 'q' como operación para salir)");
 
-        while (true) {
+        do {
             System.out.print("Introduce el primer número: ");
-            if (sc.hasNext("q")) break;
-            double num1 = sc.nextDouble();
+            num1 = sc.nextDouble();
 
-            System.out.print("Introduce la operación (+, -, *, /, %): ");
-            String op = sc.next();
+            System.out.print("Introduce la operación (+, -, *, /, % o q para salir): ");
+            operacion = sc.next();
+
+            if (operacion.equals("q")) break;
 
             System.out.print("Introduce el segundo número: ");
-            double num2 = sc.nextDouble();
+            num2 = sc.nextDouble();
 
-            double resultado = 0;
-
-            switch (op) {
+            switch (operacion) {
                 case "+": resultado = num1 + num2; break;
                 case "-": resultado = num1 - num2; break;
                 case "*": resultado = num1 * num2; break;
                 case "/": resultado = num1 / num2; break;
                 case "%": resultado = num1 % num2; break;
+                default:
+                    System.out.println("Operación no válida.");
+                    continue;
             }
 
             System.out.println("Resultado: " + resultado);
-        }
+            System.out.println();
+
+        } while (!operacion.equals("q"));
 
         System.out.println("Fin de la calculadora.");
+        sc.close();
     }
 }
+
+
 
 

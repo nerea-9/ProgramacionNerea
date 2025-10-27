@@ -11,7 +11,7 @@ public class Tema2Ejercicio26 {
 
         boolean primo = num > 1;
 
-        for (int i = 2; i <= Math.sqrt(num); i++) {
+        for (int i = 2; i < num; i++) {
             if (num % i == 0) {
                 primo = false;
                 break;
@@ -23,5 +23,6 @@ public class Tema2Ejercicio26 {
         } else {
             System.out.println(num + " no es primo.");
         }
+        sc.close();
     }
 }

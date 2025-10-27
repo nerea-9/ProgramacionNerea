@@ -10,9 +10,9 @@ public class Tema2Ejercicio22 {
         int num = sc.nextInt();
 
         int cifras = 0;
-        if (num == 0) cifras = 1;
+        if (num == 0)
+            cifras = 1;
         else {
-            num = Math.abs(num);
             while (num > 0) {
                 num /= 10;
                 cifras++;
