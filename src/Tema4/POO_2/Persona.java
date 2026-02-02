@@ -6,6 +6,7 @@ public class Persona {
     private String DNI;
     private Cuenta[] cuentaBancaria;
     private final static int maxCuentas=3;
+
     // Constructor vacío
     public Persona(){
         DNI= "";;
@@ -15,17 +16,22 @@ public class Persona {
     public Persona(String DNI){
         this.DNI=DNI;
     }
+
     // Getters y setters
     public String getDNI() {
         return DNI;
     }
     //public void setDNI(String DNI) {this.DNI = DNI;}
+
     public Cuenta[] getCuentaBancaria() {
         return cuentaBancaria;
     }
     //public Cuenta[] setCuentaBancaria(){return this.cuentaBancaria;}
+
 // Metodos
+    //SOLO HAY UN RETURN
     public boolean addCuentas(Cuenta cuenta){
+        boolena seAnyade;
         for (int i = 0; i < maxCuentas; i++){
             if (cuentaBancaria [i] == null){
                 cuentaBancaria [i] = cuenta;
@@ -33,6 +39,7 @@ public class Persona {
             }
         } return false;
     }
+
     public boolean isMorosa(){
         for (int i = 0; i < maxCuentas; i++){
             if (cuentaBancaria [i] != null &&
@@ -43,9 +50,9 @@ public class Persona {
     }
 
     // Imprime la información
-    public void print() {
-        System.out.println(this.toString());
-    }
+//    public void print() {
+//        System.out.println(this.toString());
+//    }
     // Devuelve información como texto
     public String toString(){
         return "DNI: " + DNI + "CuentaBancaria: "  + cuentaBancaria;

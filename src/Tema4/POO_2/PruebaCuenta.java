@@ -20,14 +20,14 @@ public class PruebaCuenta {
             System.out.println("6. Realizar transferencia entre cuentas" );
             System.out.println("7. Imprimir las personas morosas" );
             System.out.println("0. Salir" );
+            //meter en un procedimiento llamado showMenu()
             opcion = sc.nextInt();
             sc.nextLine();
             switch (opcion) {
                 case 1:
                     System.out.print("DNI: " );
                     String dniNuevaPersona = sc.nextLine();
-                    listaPersonas[totalPersonas] = new
-                            Persona(dniNuevaPersona);
+                    listaPersonas[totalPersonas] = new Persona(dniNuevaPersona);
                     totalPersonas++;
                     break;
 
@@ -39,11 +39,9 @@ public class PruebaCuenta {
                     System.out.print("Saldo inicial: " );
                     double saldoInicial = sc.nextDouble();
                     sc.nextLine();
-                    Cuenta nuevaCuenta = new Cuenta(numeroCuenta,
-                            saldoInicial);
+                    Cuenta nuevaCuenta = new Cuenta(numeroCuenta, saldoInicial);
                     for (int i = 0; i < totalPersonas; i++) {
-                        if
-                        (listaPersonas[i].getDNI().equals(dniParaCuenta)) {
+                        if(listaPersonas[i].getDNI().equals(dniParaCuenta)) {
                             listaPersonas[i].addCuentas(nuevaCuenta);
                         }
                     }
@@ -52,9 +50,8 @@ public class PruebaCuenta {
                     System.out.print("DNI: " );
                     String dniMostrar = sc.nextLine();
                     for (int i = 0; i < totalPersonas; i++) {
-                        if
-                        (listaPersonas[i].getDNI().equals(dniMostrar)) {
-                            listaPersonas[i].print();
+                        if (listaPersonas[i].getDNI().equals(dniMostrar)) {
+                            System.out.println(listaPersonas[i]);
                         }
                     }
                     break;
@@ -68,10 +65,9 @@ public class PruebaCuenta {
                     double cantidadIngreso = sc.nextDouble();
                     sc.nextLine();
                     for (int i = 0; i < totalPersonas; i++) {
-                        if
-                        (listaPersonas[i].getDNI().equals(dniIngreso)) {
-                            Cuenta[] cuentas =
-                                    listaPersonas[i].getCuentaBancaria();
+                        if(listaPersonas[i].getDNI().equals(dniIngreso)) {
+
+                            Cuenta[] cuentas = listaPersonas[i].getCuentaBancaria();
                             for (int j = 0; j < cuentas.length; j++) {
                                 if (cuentas[j] != null && cuentas[j].getNumCuenta().equals(cuentaIngreso)) {
                                     cuentas[j].recibirAbono(cantidadIngreso);
@@ -95,14 +91,11 @@ public class PruebaCuenta {
                     sc.nextLine();
                     Cuenta cuentaOrigen = null;
                     Cuenta cuentaDestino = null;
-                    for (int i = 0; i < totalPersonas ;
-                    i++){
-                    if
-                    (listaPersonas[i].getDNI().equals(dniOrigen)) {
+                    for (int i = 0; i < totalPersonas ; i++){
+                    if(listaPersonas[i].getDNI().equals(dniOrigen)) {
                         Cuenta[] cuentas = listaPersonas[i].getCuentaBancaria();
 
-                        for (int j = 0; j < cuentas.length ;
-                        j++){
+                        for (int j = 0; j < cuentas.length ; j++){
                             if ( cuentas[j] != null && cuentas[j].getNumCuenta().equals(cuentaOrigenTexto)){
                                 cuentaOrigen = cuentas[j];
                             }
@@ -110,8 +103,7 @@ public class PruebaCuenta {
                     }
 
                     if (listaPersonas[i].getDNI().equals(dniDestino)) {
-                        Cuenta[] cuentas =
-                                listaPersonas[i].getCuentaBancaria();
+                        Cuenta[] cuentas =     listaPersonas[i].getCuentaBancaria();
                         for (int j = 0; j < cuentas.length ;
                         j++){
                             if ( cuentas[j] != null && cuentas[j].getNumCuenta().equals(cuentaDestinoTexto)){
@@ -129,7 +121,7 @@ public class PruebaCuenta {
                 case 7:
                     for (int i = 0; i < totalPersonas ; i++){
                     if (listaPersonas[i].isMorosa()) {
-                        listaPersonas[i].print();
+                        System.out.println(listaPersonas[i]);
                     }
                 }
                 break;

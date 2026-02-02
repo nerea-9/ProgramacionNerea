@@ -9,7 +9,6 @@ public class Cuenta {
     // Constructor vacío
     public Cuenta() {
         numCuenta = "";
-        ;
         saldo = 0;
     }
 
@@ -29,7 +28,9 @@ public class Cuenta {
         return saldo;
     }
 
-    // public void setSaldo(double saldo) {this.saldo = saldo;}
+    public void setSaldo(double saldo) {this.saldo = saldo;}
+
+
     // Metodos
     // Sumar lo abonado
     public void recibirAbono(double cantidad) {
