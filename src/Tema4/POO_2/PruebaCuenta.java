@@ -3,6 +3,18 @@ package Tema4.POO_2;
 import java.util.Scanner;
 
 public class PruebaCuenta {
+
+    public static void showMenu(){
+        System.out.println("1. Instanciar objetos de tipo Persona" );
+        System.out.println("2. Instanciar objetos de tipo Cuenta y asociarlo a una persona" );
+        System.out.println("3. Mostrar datos de una persona" );
+        System.out.println("4. Recibir la nómina mensual de una persona" );
+        System.out.println("5. Recibir un pago" );
+        System.out.println("6. Realizar transferencia entre cuentas" );
+        System.out.println("7. Imprimir las personas morosas" );
+        System.out.println("0. Salir" );
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Persona[] listaPersonas = new Persona[10];
@@ -12,15 +24,9 @@ public class PruebaCuenta {
         int opcion = -1;
 
         while (opcion != 0) {
-            System.out.println("1. Instanciar objetos de tipo Persona" );
-            System.out.println("2. Instanciar objetos de tipo Cuenta y asociarlo a una persona" );
-            System.out.println("3. Mostrar datos de una persona" );
-            System.out.println("4. Recibir la nómina mensual de una persona" );
-            System.out.println("5. Recibir un pago" );
-            System.out.println("6. Realizar transferencia entre cuentas" );
-            System.out.println("7. Imprimir las personas morosas" );
-            System.out.println("0. Salir" );
+
             //meter en un procedimiento llamado showMenu()
+            showMenu();
             opcion = sc.nextInt();
             sc.nextLine();
             switch (opcion) {

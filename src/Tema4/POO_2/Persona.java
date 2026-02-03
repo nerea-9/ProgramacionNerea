@@ -1,7 +1,7 @@
 package Tema4.POO_2;
 public class Persona {
     // Usar constantes cuando un número no cambia y es una regla fija
-// Ejemplos: edad mínima, daño mínimo, curación, límites, etc (sin magic numbers)
+    // Ejemplos: edad mínima, daño mínimo, curación, límites, etc (sin magic numbers)
     // Atributos
     private String DNI;
     private Cuenta[] cuentaBancaria;
@@ -9,8 +9,8 @@ public class Persona {
 
     // Constructor vacío
     public Persona(){
-        DNI= "";;
-        cuentaBancaria= new Cuenta[maxCuentas];
+        DNI= "";
+        cuentaBancaria = new Cuenta[maxCuentas];
     }
     // Constructor con parametros
     public Persona(String DNI){
@@ -21,38 +21,42 @@ public class Persona {
     public String getDNI() {
         return DNI;
     }
-    //public void setDNI(String DNI) {this.DNI = DNI;}
+    public void setDNI(String DNI) {this.DNI = DNI;}
 
     public Cuenta[] getCuentaBancaria() {
         return cuentaBancaria;
     }
-    //public Cuenta[] setCuentaBancaria(){return this.cuentaBancaria;}
+    public Cuenta[] setCuentaBancaria(){return this.cuentaBancaria;}
 
 // Metodos
     //SOLO HAY UN RETURN
     public boolean addCuentas(Cuenta cuenta){
-        boolena seAnyade;
+        boolean seAnyade  = false;
+
         for (int i = 0; i < maxCuentas; i++){
-            if (cuentaBancaria [i] == null){
+            if (cuentaBancaria [i] == null && !seAnyade){
                 cuentaBancaria [i] = cuenta;
-                return true;
+                seAnyade = true;
             }
-        } return false;
+        }
+        return seAnyade;
     }
 
     public boolean isMorosa(){
+        boolean morosa  = false;
+
         for (int i = 0; i < maxCuentas; i++){
             if (cuentaBancaria [i] != null &&
                 cuentaBancaria[i].getSaldo() < 0){
-                return true;
+                morosa = true;
             }
-        }return false;
+        }
+        return morosa;
     }
 
     // Imprime la información
-//    public void print() {
-//        System.out.println(this.toString());
-//    }
+    //    public void print() {System.out.println(this.toString());}
+
     // Devuelve información como texto
     public String toString(){
         return "DNI: " + DNI + "CuentaBancaria: "  + cuentaBancaria;

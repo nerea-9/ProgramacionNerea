@@ -1,7 +1,7 @@
 package Tema4.POO_2;
 public class Cuenta {
     // Usar constantes cuando un número no cambia y es una regla fija
-// Ejemplos: edad mínima, daño mínimo, curación, límites, etc (sin magic numbers)
+    // Ejemplos: edad mínima, daño mínimo, curación, límites, etc (sin magic numbers)
     // Atributos
     private String numCuenta;
     private double saldo;
