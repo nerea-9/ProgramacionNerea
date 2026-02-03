@@ -22,12 +22,11 @@ public class Cuenta {
     public String getNumCuenta() {
         return numCuenta;
     }
+    public void setNumCuenta(String numCuenta) {this.numCuenta =numCuenta;}
 
-    // public void setNumCuenta(String numCuenta) {this.numCuenta =numCuenta;}
     public double getSaldo() {
         return saldo;
     }
-
     public void setSaldo(double saldo) {this.saldo = saldo;}
 
 
