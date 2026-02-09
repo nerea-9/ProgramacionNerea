@@ -43,10 +43,19 @@ public class GestionarCola {
         cola.add(new UsuarioBanco("Paco", 44, "34269812W"));
         cola.add(new UsuarioBanco("Belen", 24, "10456525A"));
 
-        System.out.println("Cola actual:"); System.out.println(cola);
-        System.out.println("Atender al primero: "); gestionar.attendUsuario();
-        System.out.println("Cola después de atender: "); System.out.println(cola);
-        System.out.println("Quitando al usuario en posición 1 (Por ejemplo)"); gestionar.tiredUsuario(1);
-        System.out.println("Cola final: "); System.out.println(cola);
+            System.out.println("Cola actual:");
+            System.out.println(cola);
+
+            System.out.println("Atender al primero: ");
+            gestionar.attendUsuario();
+
+            System.out.println("Cola después de atender: ");
+            System.out.println(cola);
+
+            System.out.println("Quitando al usuario en posición 1");
+            gestionar.tiredUsuario(1);
+
+            System.out.println("Cola final: ");
+            System.out.println(cola);
     }
 }
