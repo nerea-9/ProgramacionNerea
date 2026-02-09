@@ -43,7 +43,7 @@ public class GestionarCola {
         cola.add(new UsuarioBanco("Paco", 44, "34269812W"));
         cola.add(new UsuarioBanco("Belen", 24, "10456525A"));
 
-            System.out.println("Cola actual:");
+            System.out.println("Cola actual: ");
             System.out.println(cola);
 
             System.out.println("Atender al primero: ");
