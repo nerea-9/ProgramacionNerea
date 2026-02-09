@@ -25,6 +25,7 @@ public class Compra {
             System.out.println("EL producto ya existe");
         } else {
             compras.add(compra);
+            System.out.println("El producto se ha añadido");
         }
 
         for (String producto : compras){
@@ -35,25 +36,3 @@ public class Compra {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
