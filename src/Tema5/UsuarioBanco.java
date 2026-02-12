@@ -39,6 +39,6 @@ public class UsuarioBanco {
     }
 
     public String toString(){
-        return "Nombre" + nombre + ", Edad: " + edad + ", DNI: " + dni;
+        return "Nombre: " + nombre + ", Edad: " + edad + ", DNI: " + dni;
     }
 }

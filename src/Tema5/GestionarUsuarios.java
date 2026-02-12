@@ -66,11 +66,15 @@ public class GestionarUsuarios {
             System.out.println(entrada.getKey() + ": " + entrada.getValue());
         }
 
-        // Aquí empiezas a llamar a los métodos
+
             altaUsuario(usuarios, "999X", "Nuevo", 30);
+
             bajaUsuario(usuarios, "45769021L");
+
             mostrarUsuario(usuarios, "53668040H");
+
             modificarUsuario(usuarios, "54678945J", "Juan Carlos", 41);
+
             mostrarTodos(usuarios);
     }
 }

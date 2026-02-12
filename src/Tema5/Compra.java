@@ -34,5 +34,4 @@ public class Compra {
 
         System.out.println("La compra es: " + compras.size());
     }
-
 }
