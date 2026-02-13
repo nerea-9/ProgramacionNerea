@@ -20,7 +20,7 @@ public class Ejercicio4 {
         while(position >= 0){
 
             try{
-                System.out.println("Que posicion del vector quieres mostrar: ");
+                System.out.println("Que posicion del vector quieres mostrar(negativo para salir): ");
                 position = sc.nextInt();
 
                 if(position >= 0){
