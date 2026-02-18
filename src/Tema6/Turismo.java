@@ -1,6 +1,6 @@
 package Tema6;
 
-public class Turismo extends Vehículo {
+public class Turismo extends Vehiculo {
 
     private int numPlazas;
     private boolean tipoUso;

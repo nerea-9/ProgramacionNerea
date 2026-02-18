@@ -66,6 +66,8 @@ public class GestionarUsuarios {
             System.out.println(entrada.getKey() + ": " + entrada.getValue());
         }
 
+        // En el examen cuando me diga de hacer una aplicación que permitirá gestiona.
+        // Lo mejor es hacer un show menu para que el usuario vaya eligiendo que hacer mienras van pasando cosas
 
             altaUsuario(usuarios, "999X", "Nuevo", 30);
 

@@ -1,6 +1,6 @@
 package Tema6;
 
-public class Camion extends Vehículo{
+public class Camion extends Vehiculo {
 
     private int pesoMaxAutorizado;
     private boolean mercanciaPeligrosa;

@@ -1,6 +1,6 @@
 package Tema6;
 
-public class Ciclomotor extends Vehículo{
+public class Ciclomotor extends Vehiculo {
 
     private int cilindrada;
 

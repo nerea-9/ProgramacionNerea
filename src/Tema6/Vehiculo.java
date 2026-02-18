@@ -1,17 +1,17 @@
 package Tema6;
 
-public class Vehículo {
+public class Vehiculo {
     private String matricula;
     private String marca;
     private String modelo;
 
-    public Vehículo(){
+    public Vehiculo(){
         matricula = "";
         marca = "";
         modelo = "";
     }
 
-    public Vehículo(String matricula, String marca, String modelo){
+    public Vehiculo(String matricula, String marca, String modelo){
         this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
