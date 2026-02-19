@@ -1,6 +1,6 @@
 package Tema5;
 
-public class Pajaro {
+public class Pajaro extends Avistamiento{
     private double peso;
     private String especie;
 

@@ -2,7 +2,7 @@ package Tema5;
 
 
 import java.util.Scanner;
-import java.util.List;
+import java.util.ArrayList;
 
 public class RegistroAnimales {
 
@@ -18,10 +18,23 @@ public class RegistroAnimales {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        ArrayList<Avistamiento> lista = new ArrayList<>();
 
         int opcion = -1;
 
+        while (opcion != 0) {
+
+            showMenu();
+            opcion = sc.nextInt();
+            sc.nextLine();
+            switch (opcion) {
+
+                case 1:
+
+            }
+
+
+        }
 
 
 

@@ -1,6 +1,6 @@
 package Tema5;
 
-public class ManadaLobo {
+public class ManadaLobo extends Avistamiento {
     private int numLobos;
     private String observaciones;
 

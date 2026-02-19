@@ -1,6 +1,6 @@
 package Tema5;
 
-public class Serpiente {
+public class Serpiente extends Avistamiento {
 
     private int longitud;
     private String especie;
