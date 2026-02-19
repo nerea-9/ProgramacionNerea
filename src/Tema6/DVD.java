@@ -3,15 +3,15 @@ package Tema6;
 public class DVD extends FichaBiblioteca{
     private String director;
     private int ano;
-    private boolean tipo;
+    private String tipo;
 
     public DVD(){
         director = "";
         ano = 0;
-        tipo = false;
+        tipo = "";
     }
 
-    public DVD(int numero, String titulo, String director, int ano, boolean tipo){
+    public DVD(int numero, String titulo, String director, int ano, String tipo){
         super(numero, titulo);
         this.director = director;
         this.ano = ano;
@@ -32,15 +32,14 @@ public class DVD extends FichaBiblioteca{
         this.ano = ano;
     }
 
-    public boolean getTipo(){
+    public String getTipo(){
         return tipo;
     }
-    public void setTipo(boolean tipo){
+    public void setTipo(String tipo){
         this.tipo = tipo;
     }
 
     public String toString(){
         return super.toString() + ", Director: " + director + ", Año: " + ano + ", Tipo: " + tipo;
     }
-
 }

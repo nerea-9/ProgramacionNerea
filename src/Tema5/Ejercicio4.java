@@ -6,33 +6,38 @@ import java.util.Scanner;
 
 public class Ejercicio4 {
     public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
         int N = (int)(Math.random() * 100) + 1;
         int[] vector = new int[N];
+        try{
+            for(int i = 0; i < vector.length; i++){
+                vector[i] = (int)(Math.random() * 100) + 1;
+            }
 
-        for(int i = 0; i < vector.length; i++){
-            vector[i] = (int)(Math.random() * 100) + 1;
+
+            int position = 0;
+
+            while(position >= 0){
+
+
+                    System.out.println("Que posicion del vector quieres mostrar(negativo para salir): ");
+                    position = sc.nextInt();
+
+                    if(position >= 0){
+                        System.out.println("Valor en la posición " + position + ": " + vector[position]); }
+
+            }
         }
-
-        Scanner sc = new Scanner(System.in);
-
-        int position = 0;
-
-        while(position >= 0){
-
-            try{
-                System.out.println("Que posicion del vector quieres mostrar(negativo para salir): ");
-                position = sc.nextInt();
-
-                if(position >= 0){
-                    System.out.println("Valor en la posición " + position + ": " + vector[position]); }
-            }
-            catch(InputMismatchException e){
-                System.err.println("Error: Debes introducir un número");
-                sc.nextLine();
-            }
-            catch(ArrayIndexOutOfBoundsException e){
-                System.err.println("Error: Esa posición no existe");
-            }
+        catch(InputMismatchException e){
+            System.err.println("Error: Debes introducir un número");
+            sc.nextLine();
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.err.println("Error: Esa posición no existe");
+        }
+        catch(Exception e){
+            System.err.println("Error: Esa posición no existe");
+            System.err.println(e.getMessage());
         }
     }
 }

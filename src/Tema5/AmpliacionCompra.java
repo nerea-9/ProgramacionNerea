@@ -13,6 +13,8 @@ public class AmpliacionCompra {
         Scanner sc = new Scanner(System.in);
 
         String compra;
+        String productoCarro;
+
 
         compras.add("Leche");
         compras.add("Huevos");

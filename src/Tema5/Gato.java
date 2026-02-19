@@ -12,13 +12,16 @@ public class Gato {
     }
 
     public Gato(String nombre, int edad) throws Exception{
-        if (nombre.length() < 3)
-            throw new Exception("Error: El nombre debe tener al menos 3 caracteres");
-        if (edad < 0)
-            throw new Exception("Error: La edad no puede ser negativa");
+//        if (nombre.length() < 3)
+//            throw new Exception("Error: El nombre debe tener al menos 3 caracteres");
+//        if (edad < 0)
+//            throw new Exception("Error: La edad no puede ser negativa");
 
-        this.nombre = nombre;
-        this.edad= edad;
+        this.setNombre(nombre);
+        this.setEdad(edad);
+
+        //this.nombre = nombre;
+        //this.edad= edad;
     }
 
     public String getNombre(){

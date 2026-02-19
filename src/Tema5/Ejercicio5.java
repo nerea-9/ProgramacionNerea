@@ -30,11 +30,11 @@ public class Ejercicio5 {
                 System.out.println("Escribe un numero (negativo para salir): ");
                 num = sc.nextInt();
 
-                if (num >= 0) {
+                //if (num >= 0) {
                     ej.imprimePositivo(num);
-                } else {
+                //} else {
                     ej.imprimeNegativo(num);
-                }
+                //}
 
             } catch (InputMismatchException e) {
                 System.err.println("Error: Debes introducir un número");

@@ -31,17 +31,4 @@ public class FichaBiblioteca {
     public String toString(){
         return "Numero: " + numero + ", Titulo: " + titulo;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

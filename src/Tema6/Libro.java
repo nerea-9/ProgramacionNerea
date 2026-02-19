@@ -1,16 +1,16 @@
 package Tema6;
 
-public class Libros extends FichaBiblioteca{
+public class Libro extends FichaBiblioteca{
 
     private String autor;
     private String editorial;
 
-    public Libros(){
+    public Libro(){
         autor = "";
         editorial = "";
     }
 
-    public Libros(int numero, String titulo, String autor, String editorial){
+    public Libro(int numero, String titulo, String autor, String editorial){
         super(numero, titulo);
         this.autor = autor;
         this.editorial = editorial;
@@ -33,5 +33,4 @@ public class Libros extends FichaBiblioteca{
     public String toString(){
         return super.toString() + ", Autor: " + autor + ", Editorial: " + editorial;
     }
-
 }
