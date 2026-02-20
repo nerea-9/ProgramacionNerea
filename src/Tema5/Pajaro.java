@@ -9,7 +9,8 @@ public class Pajaro extends Avistamiento{
         especie = "";
     }
 
-    public Pajaro(double peso, String especie){
+    public Pajaro(int hora, double peso, String especie){
+        this.hora = hora;
         this.peso = peso;
         this.especie = especie;
     }

@@ -10,7 +10,8 @@ public class Serpiente extends Avistamiento {
         especie = "";
     }
 
-    public Serpiente(int longitud, String especie){
+    public Serpiente(int hora, int longitud, String especie){
+        this.hora = hora;
         this.longitud = longitud;
         this.especie = especie;
     }

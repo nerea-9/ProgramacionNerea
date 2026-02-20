@@ -9,7 +9,8 @@ public class ManadaLobo extends Avistamiento {
         observaciones = "";
     }
 
-    public ManadaLobo(int numLobos, String observaciones){
+    public ManadaLobo(int hora, int numLobos, String observaciones){
+        this.hora = hora;
         this.numLobos = numLobos;
         this.observaciones = observaciones;
     }
