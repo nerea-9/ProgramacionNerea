@@ -27,60 +27,62 @@ public class RegistroAnimales {
             showMenu();
             opcion = sc.nextInt();
             sc.nextLine();
+
             switch (opcion) {
 
                 case 1:
-                    System.out.println("¿A qué hora ha sido el avistamiento?");
-                    int hora = sc.nextInt();
-                    sc.nextLine();
+                   System.out.println("Hora del avistamiento: ");
+                   int hora = sc.nextInt();
+                   sc.nextLine();
 
-                    System.out.println("¿Qué animal has visto?");
-                    System.out.println("1. Serpiente");
-                    System.out.println("2. Pájaro");
-                    System.out.println("3. Manada de lobos");
-                    int tipo = sc.nextInt();
-                    sc.nextLine();
+                   System.out.println("Tipo de animal (Serpiente, Pajaro o ManadaLobos): ");
+                   String tipo =  sc.nextLine();
 
-                    if (tipo == 1) {
-                        System.out.println("Longitud de la serpiente:");
-                        int longitud = sc.nextInt();
-                        sc.nextLine();
+                   System.out.println("Dato numerico (Longitud, Peso o Nº Lobos): ");
+                   int datoNum = sc.nextInt();
+                   sc.nextLine();
 
-                        System.out.println("Especie de la serpiente:");
-                        String especie = sc.nextLine();
+                   System.out.println("DatoTexto (Especio u observaciones): ");
+                   String datoTexto = sc.nextLine();
 
-                        lista.add(new Serpiente(hora, longitud, especie));
+                   lista.add(new Avistamiento(hora, tipo, datoNum, datoTexto));
+                   break;
+
+                case 2:
+                    for(Avistamiento avistamiento : lista){
+                        if(avistamiento.getHora() >= 8)
+                            System.out.println(avistamiento);
                     }
-
-                    else if (tipo == 2) {
-                        System.out.println("Peso del pájaro:");
-                        int peso = sc.nextInt();
-                        sc.nextLine();
-
-                        System.out.println("Especie del pájaro:");
-                        String especie = sc.nextLine();
-
-                        lista.add(new Pajaro(hora, peso, especie));
-                    }
-
-                    else if (tipo == 3) {
-                        System.out.println("Número de lobos:");
-                        int numero = sc.nextInt();
-                        sc.nextLine();
-
-                        System.out.println("Observaciones:");
-                        String obs = sc.nextLine();
-
-                        lista.add(new ManadaLobo(hora, numero, obs));
-                    }
-
                     break;
 
+                case 3:
+                    for(Avistamiento avistamiento : lista){
+                        if(avistamiento.getHora() < 8 || avistamiento.getHora() >= 20)
+                        System.out.println(avistamiento);
+                    }
+                    break;
 
+                case 4:
+                    for(Avistamiento avistamiento : lista){
+                        if(avistamiento.getTipo().equals("ManadaLobos"))
+                        System.out.println(avistamiento);
+                    }
+                    break;
 
+                case 5:
+                    for (Avistamiento avistamiento : lista){
+                        if(avistamiento.getTipo().equals("Serpiente"))
+                        System.out.println(avistamiento);
+                    }
+                    break;
+
+                case 6:
+                    for (Avistamiento avistamiento : lista){
+                        if(avistamiento.getTipo().equals("Pajaro"))
+                        System.out.println(avistamiento);
+                    }
+                    break;
             }
-
-
         }
     }
 }
