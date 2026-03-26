@@ -132,22 +132,4 @@ public class Hero {
     public String toString() {
         return "Nombre: " + name + ", Nivel: " + level + ", Salud: " + health + ", MaximaSalud: " + maxHealth + ", Experiencia: " + experience + ", Ataque: " + attack + ", Defensa: " + defense;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
