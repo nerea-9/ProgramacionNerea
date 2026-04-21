@@ -20,7 +20,7 @@ public class Ejercicio1 {
         String formato = "Nombre: " + nombre + "\nEdad: " + edad;
 
         try {
-            FileWriter archivo = new FileWriter("\"src/Tema7/Serializacion/usuario.txt\"");
+            FileWriter archivo = new FileWriter("src/Documentos/usuario.txt");
 
             for(int i = 0; i < formato.length(); i++) {
                 archivo.write(formato.charAt(i));

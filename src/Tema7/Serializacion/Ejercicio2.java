@@ -8,7 +8,8 @@ public class Ejercicio2 {
 
     public static void main(String[] args) {
 
-        String FileName = "src/Tema7/Serializacion/usuario.txt";
+        String FileName = "src/Documentos/usuario.txt";
+
 
         try (BufferedReader br = new BufferedReader(new FileReader(FileName))){
 
