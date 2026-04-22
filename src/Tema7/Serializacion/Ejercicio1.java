@@ -29,7 +29,6 @@ public class Ejercicio1 {
 
             archivo.close();
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
