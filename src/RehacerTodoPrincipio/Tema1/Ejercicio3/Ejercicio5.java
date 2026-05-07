@@ -15,9 +15,10 @@ public class Ejercicio5 {
             }else {
                 for (int i = 1; i <= factorial; i++) {
                     acumulador *= i;
-                    System.out.println(acumulador);
+
             }
-              sc.close();
+                System.out.println(acumulador);
         }
+        sc.close();
     }
 }
