@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Introduce un numero, para hacer factorial: ");
-        int factorial = scanner.nextInt();
+        int factorial = sc.nextInt();
 
         int acumulador = 1;
 
@@ -15,8 +15,9 @@ public class Ejercicio5 {
             }else {
                 for (int i = 1; i <= factorial; i++) {
                     acumulador *= i;
+                    System.out.println(acumulador);
             }
-                System.out.println(acumulador);
+              sc.close();
         }
     }
 }
